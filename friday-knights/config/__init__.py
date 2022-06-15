@@ -1,12 +1,12 @@
 from os import getenv
 
-db_name = getenv('DB_NAME')
+db_name = getenv('FRI_DB_NAME')
 db_user = getenv('DB_USER')
 db_passwd = getenv('DB_PASSWD')
 db_host = getenv('DB_HOST')
 db_port = getenv('DB_PORT')
 app_key = getenv('APP_KEY')
-db_credentials = f'{db_user}:{db_pass}'
+db_credentials = f'{db_user}:{db_passwd}'
 db_socket = f'{db_host}:{db_port}'
 
 # loaded config 
