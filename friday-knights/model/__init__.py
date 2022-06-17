@@ -10,3 +10,7 @@ Option(id,name,question,is_answer)
 
 cfg = Config()
 db = SQLAlchemy()
+
+class Session(db.Model):
+  id = db.Column(db.Integer(),primary_key=True)
+  name = db.Column(db.String(), unique=True)
