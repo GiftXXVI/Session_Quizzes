@@ -9,6 +9,9 @@ app.config.update({'SQLALCHEMY_DATABASE_URI': cfg.db_url,
                    'SECRET_KEY': cfg.sec_key})
 db.init_app(app)
 migrate = Migrate(app, db)
+#CORS(app, resources=r'*',origins=r'*',methods=['POST','PUT','DELETE'])
 app.register_blueprint(sessions_bp)
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080, debug=True)
