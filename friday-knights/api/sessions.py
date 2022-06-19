@@ -4,7 +4,7 @@ sessions_bp = Blueprint('sessions', __name__)
 
 CORS(
     sessions_bp,
-    resources=r'/sessions',
+    resources=r'/sessions/*',
     origins=r'*',
     methods=[
         'PATCH',
